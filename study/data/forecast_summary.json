@@ -1,0 +1,136 @@
+{
+  "model": "mistralai/Timestral-209M",
+  "device": "cpu",
+  "cuda": false,
+  "context_hours": 2000,
+  "prediction_length": 96,
+  "quantile_levels": [
+    0.01,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95,
+    0.99
+  ],
+  "examples": {
+    "univariate": {
+      "seconds": 0.16,
+      "quantiles_shape": [
+        1,
+        1,
+        96,
+        21
+      ],
+      "median_hour_0": 2.841,
+      "median_hour_24": 2.296,
+      "median_hour_48": 2.201,
+      "median_hour_95": 0.762,
+      "q10_hour_95": -5.861,
+      "q90_hour_95": 8.708,
+      "median_range": 7.837,
+      "figure": "study/figures/01_univariate.png"
+    },
+    "two_independent_series": {
+      "seconds": 0.24,
+      "quantiles_shape": [
+        2,
+        1,
+        96,
+        21
+      ],
+      "median_hour_0": 2.841,
+      "median_hour_24": 2.296,
+      "median_hour_48": 2.201,
+      "median_hour_95": 0.762,
+      "q10_hour_95": -5.861,
+      "q90_hour_95": 8.708,
+      "median_range": 7.837,
+      "figure": "study/figures/02_two_independent_series.png",
+      "london_median_hour_0": 7.679,
+      "london_median_range": 3.054
+    },
+    "multivariate": {
+      "seconds": 0.31,
+      "quantiles_shape": [
+        1,
+        3,
+        96,
+        21
+      ],
+      "median_hour_0": 3.163,
+      "median_hour_24": 3.931,
+      "median_hour_48": 3.327,
+      "median_hour_95": 0.877,
+      "q10_hour_95": -5.286,
+      "q90_hour_95": 8.34,
+      "median_range": 9.784,
+      "figure": "study/figures/03_multivariate.png"
+    },
+    "past_covariate": {
+      "seconds": 0.37,
+      "quantiles_shape": [
+        1,
+        1,
+        96,
+        21
+      ],
+      "median_hour_0": 3.012,
+      "median_hour_24": 2.7,
+      "median_hour_48": 2.503,
+      "median_hour_95": 0.786,
+      "q10_hour_95": -5.626,
+      "q90_hour_95": 8.873,
+      "median_range": 8.692,
+      "figure": "study/figures/04_past_covariate.png"
+    },
+    "known_future": {
+      "seconds": 1.0,
+      "quantiles_shape": [
+        1,
+        1,
+        96,
+        21
+      ],
+      "median_hour_0": 2.937,
+      "median_hour_24": 2.495,
+      "median_hour_48": 2.722,
+      "median_hour_95": 1.202,
+      "q10_hour_95": -5.518,
+      "q90_hour_95": 9.211,
+      "median_range": 7.872,
+      "figure": "study/figures/05_known_future_covariate.png"
+    },
+    "categorical": {
+      "seconds": 0.37,
+      "quantiles_shape": [
+        1,
+        1,
+        96,
+        21
+      ],
+      "median_hour_0": 2.798,
+      "median_hour_24": 2.126,
+      "median_hour_48": 2.586,
+      "median_hour_95": 1.33,
+      "q10_hour_95": -5.702,
+      "q90_hour_95": 9.57,
+      "median_range": 7.949,
+      "figure": "study/figures/06_categorical_covariate.png"
+    }
+  }
+}

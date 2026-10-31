@@ -1,0 +1,50 @@
+{
+  "api": "Open-Meteo Historical Weather API",
+  "documentation": "https://open-meteo.com/en/docs/historical-weather-api",
+  "requests": {
+    "shanghai": "https://archive-api.open-meteo.com/v1/archive?latitude=31.2304&longitude=121.4737&start_date=2023-10-01&end_date=2024-01-06&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m&timezone=UTC",
+    "london": "https://archive-api.open-meteo.com/v1/archive?latitude=51.5072&longitude=-0.1276&start_date=2023-10-01&end_date=2024-01-06&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m&timezone=UTC"
+  },
+  "download_start": "2023-10-01",
+  "download_end": "2024-01-06",
+  "forecast_origin_utc": "2024-01-01T00:00",
+  "context_hours": 2000,
+  "horizon_hours": 96,
+  "places": {
+    "shanghai": {
+      "requested_latitude": 31.2304,
+      "requested_longitude": 121.4737,
+      "grid_latitude": 31.247803,
+      "grid_longitude": 121.5,
+      "elevation_m": 5.0,
+      "hourly_units": {
+        "time": "iso8601",
+        "temperature_2m": "\u00b0C",
+        "relative_humidity_2m": "%",
+        "wind_speed_10m": "km/h"
+      }
+    },
+    "london": {
+      "requested_latitude": 51.5072,
+      "requested_longitude": -0.1276,
+      "grid_latitude": 51.493847,
+      "grid_longitude": -0.1630249,
+      "elevation_m": 16.0,
+      "hourly_units": {
+        "time": "iso8601",
+        "temperature_2m": "\u00b0C",
+        "relative_humidity_2m": "%",
+        "wind_speed_10m": "km/h"
+      }
+    }
+  },
+  "columns": {
+    "time_utc": "Hour start in UTC, ISO-8601, from the API field hourly.time.",
+    "temperature_2m": "Air temperature at 2 metres, degrees Celsius.",
+    "relative_humidity_2m": "Relative humidity at 2 metres, percent.",
+    "wind_speed_10m": "Wind speed at 10 metres, kilometres per hour.",
+    "hour_of_day": "UTC hour 0\u201323, derived from time_utc. Known for any future hour.",
+    "weekend": "1 on Saturday and Sunday UTC, else 0. A 0/1 indicator known ahead.",
+    "day_of_week": "Monday=0 through Sunday=6, integer codes derived from time_utc."
+  }
+}
